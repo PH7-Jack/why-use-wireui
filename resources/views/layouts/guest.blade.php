@@ -14,9 +14,13 @@
         @livewireStyles
 
         <!-- Scripts -->
+        <wireui:scripts />
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="bg-slate-100">
+        <x-dialog />
+        <x-notifications />
+
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot }}
         </div>

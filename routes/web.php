@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UsersController;
 use App\Http\Livewire\TaskList;
 use App\Http\Livewire\TaskListWireUi;
 use Illuminate\Support\Facades\Route;
@@ -31,3 +32,4 @@ Route::middleware([
 
 Route::get('task-list', TaskList::class);
 Route::get('task-list-wireui', TaskListWireUi::class);
+Route::get('/get-users', UsersController::class)->name('users.index');

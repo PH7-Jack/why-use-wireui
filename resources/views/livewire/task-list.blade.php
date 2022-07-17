@@ -1,5 +1,14 @@
 <div class="p-20">
     <div class="bg-white border shadow rounded-md p-5">
+        <x-select
+            label="Search a User"
+            wire:model.defer="userSelected"
+            placeholder="Select some user"
+            :async-data="route('users.index')"
+            option-label="name"
+            option-value="id"
+        />
+
         <div class="flex gap-2 w-full">
             <div class="w-full">
                 <x-jet-label for="task" value="Create a Task" />
