@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\TaskList;
+use App\Http\Livewire\TaskListWireUi;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +28,6 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('task-list', TaskList::class);
+Route::get('task-list-wireui', TaskListWireUi::class);
